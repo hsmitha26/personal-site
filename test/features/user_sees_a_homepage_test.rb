@@ -11,7 +11,7 @@ class HomepageTest < CapybaraTestCase
   def test_user_sees_error_status_code
     visit '/comedians'
 
-    assert page.has_content?("Error: this page does not exist.")
+    assert page.has_content?("Error: page not found.")
     assert_equal 404, page.status_code
   end
 end
